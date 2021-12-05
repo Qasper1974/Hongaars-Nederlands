@@ -4,7 +4,6 @@ const eerste_woord = {
 }
 
 module.exports = (req, res, next) => {
-    // res.send('<h1>HALLO</h1>');
-    res.render('welcome')
+    res.render('welcome.ejs', eerste_woord)
 };
 
