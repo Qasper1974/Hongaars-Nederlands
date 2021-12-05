@@ -2,8 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-const getWelcomePage = require('../controllers/welcome');
+const welcomePage = require('../controllers/welcome');
+const get404 = require('../controllers/error');
 
-router.get('/welcome', getWelcomePage);
+router.get('/welcome', welcomePage.getHomePage);
 
 module.exports = router;

@@ -3,7 +3,7 @@ const eerste_woord = {
     vertaling: 'familie'
 }
 
-module.exports = (req, res, next) => {
+module.exports.getHomePage = (req, res, next) => {
     res.render('welcome.ejs', eerste_woord)
 };
 

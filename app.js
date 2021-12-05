@@ -8,11 +8,14 @@ app.set('views', 'pages')
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const welcomeRoute = require('./routes/welcome');
+const welcomeRoutes = require('./routes/welcome');
+const error = require('./routes/error');
+
 
 // app.use(bodyparser.urlencoded({extended: false}));
 
 
-app.use(welcomeRoute);
+app.use(welcomeRoutes);
+app.use(error);
 
 app.listen(5000);
