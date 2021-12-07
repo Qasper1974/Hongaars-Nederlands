@@ -24,15 +24,15 @@ module.exports = class Woord {
         });
     }
 
-    static fetchAll () {       
+    static fetchAll (cb) {       
          
         const p = path.join(path.dirname(require.main.filename), 'data', 'woordenschat.json');
     
         fs.readFile(p, (err, fileContent) => {
             if (err) {
-                return [];
+                cb([]);
             };
-            return JSON.parse(fileContent)
+            cb(JSON.parse(fileContent));
         });
     };
 };

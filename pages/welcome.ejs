@@ -7,8 +7,9 @@
         <br>
         <h4>Hongaars - Nederlands</h4>
         <br>
-        <%= wsch  %>
-
+        <% for (let i of wsch) { %>
+            <h3><%= i.woord%><span>    </span> <%= i.vertaling %></h3>
+        <% } %>
         <br>
         <h4>Nederlands - Hongaars</h4>
 <%- include('./partials/end.ejs') %>

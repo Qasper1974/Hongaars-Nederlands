@@ -1,13 +1,13 @@
 const Woord = require('../models/woord');
 
 module.exports.getHomePage = (req, res, next) => {
-    const woordenschat = Woord.fetchAll();
+    Woord.fetchAll( woorden => {
+        res.render('welcome.ejs', {
+            wsch: woorden
+        });
 
-    res.render('welcome.ejs', {
-        wsch : woordenschat
     });
 
-    console.log(woordenschat);
 };
 
 
