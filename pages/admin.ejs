@@ -1,0 +1,19 @@
+<%- include('./partials/head.ejs') %>
+</head>
+<body>
+    <%- include('./partials/navigation') %>
+    <main>
+        <h3>Woorden toevoegen</h3>
+        <br>
+        <form action="/admin/add-word" method="POST">
+            <div class="form-group">
+              <label for="woord">Nieuw woord</label>
+              <input type="text" class="form-control" name="woord" id="woord" placeholder="Voeg nieuw woord toe...">
+            </div>
+            <div class="form-group">
+              <label for="vertaling">Vertaling</label>
+              <input type="text" class="form-control" name="vertaling" id="vertaling" placeholder="Voeg de vertaling toe...">
+            </div>
+            <button type="submit" class="btn btn-primary">Voeg toe</button>
+          </form>
+<%- include('./partials/end.ejs') %>
