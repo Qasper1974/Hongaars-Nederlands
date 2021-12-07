@@ -1,1 +1,8 @@
-[{"woord":"család","vertaling":"familie"},{"woord":"érdekes","vertaling":"interessant"},{"woord":"jó","vertaling":"goed"},{"woord":"orvos","vertaling":"dokter, arts"},{"woord":"nyaraló","vertaling":"buitenverblijf"}]
+[
+	{ "woord": "jó", "vertaling": "goed" },
+	{ "woord": "nap", "vertaling": "dag" },
+	{ "woord": "család", "vertaling": "familie" },
+	{ "woord": "érdekes", "vertaling": "interessant" },
+	{ "woord": "ez a", "vertaling": "dit" },
+	{ "woord": "orvos", "vertaling": "arts" }
+]

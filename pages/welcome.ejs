@@ -9,7 +9,11 @@
         <br>
         <%  wsch.sort(function(a,b) { if (a.woord < b.woord) {return -1;} if (a.woord > b.woord) { return 1;} }) %>
         <% for (let i of wsch) { %>
-            <h3><%= i.woord%> <%= i.vertaling %></h3>
+            <div class="d-flex flex-row">
+                <div class="p-1 m-1 kaart"><%= i.woord%></div>
+                <div class="p-1 m-1">-</div>
+                <div class="p-1 m-1 vertaling"><%= i.vertaling %></div>
+              </div>
         <% } %>
         <br>
         <h4>Nederlands - Hongaars</h4>

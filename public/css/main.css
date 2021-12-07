@@ -6,3 +6,12 @@ main {
     font-size: 1.5rem;
     height: 50rem;
 }
+
+.kaart {
+    background-color: wheat;
+    color: rgb(75, 55, 192);
+}
+
+.vertaling {
+    font-style: italic;
+}
