@@ -1,9 +1,13 @@
-const eerste_woord = {
-    woord: 'család',
-    vertaling: 'familie'
-}
+const Woord = require('../models/woord');
 
 module.exports.getHomePage = (req, res, next) => {
-    res.render('welcome.ejs', eerste_woord)
+    const woordenschat = Woord.fetchAll();
+
+    res.render('welcome.ejs', {
+        wsch : woordenschat
+    });
+
+    console.log(woordenschat);
 };
+
 

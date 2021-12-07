@@ -12,8 +12,9 @@ module.exports.postWord = (req, res, next) => {
     )
     
     woord.save();
-    console.log(req.body);    
 
+    res.redirect('/welcome');
+    
     res.render('add-word.ejs')
 
 };
