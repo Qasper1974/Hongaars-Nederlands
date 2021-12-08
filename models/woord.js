@@ -4,8 +4,9 @@ const path = require('path');
 
 module.exports = class Woord {
     constructor(w, v) {
-        this.woord = w;
-        this.vertaling = v;
+        this.woord = w,
+        this.vertaling = v,
+        this.lecke = 1
     }
 
     save() {

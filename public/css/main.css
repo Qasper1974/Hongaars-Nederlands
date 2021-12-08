@@ -11,7 +11,21 @@ main {
     background-color: wheat;
     color: rgb(75, 55, 192);
 }
-
+.woord {
+    color:rgb(102, 87, 242);
+    font-weight: bold;
+}
 .vertaling {
     font-style: italic;
+}
+
+.lecke {
+    font-size: 0.7rem;
+    color: black;
+}
+
+.titel {
+    font-style: italic;
+    font-size: 2rem;
+    color: crimson;
 }
