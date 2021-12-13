@@ -3,10 +3,10 @@ const path = require('path');
 
 
 module.exports = class Woord {
-    constructor(w, v) {
+    constructor(w, v, l) {
         this.woord = w,
         this.vertaling = v,
-        this.lecke = 1
+        this.les = l
     }
 
     save() {

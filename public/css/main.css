@@ -4,7 +4,7 @@ main {
     background-color: rgb(136, 186, 230);
     color: white;
     font-size: 1.5rem;
-    height: 50rem;
+    height: 250rem;
 }
 
 .kaart {
@@ -28,4 +28,8 @@ main {
     font-style: italic;
     font-size: 2rem;
     color: crimson;
+}
+.aantal-woorden {
+    font-size: 1rem;
+    color: rgb(80, 45, 52);
 }

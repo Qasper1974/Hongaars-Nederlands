@@ -12,6 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const welcomeRoutes = require('./routes/welcome');
 const adminRoutes = require('./routes/admin');
+const filters = require('./routes/filters');
 
 const error = require('./routes/error');
 
@@ -21,6 +22,7 @@ app.use(bodyparser.urlencoded({extended: false}));
 
 app.use(welcomeRoutes);
 app.use('/admin', adminRoutes);
+app.use(filters);
 
 app.use(error);
 

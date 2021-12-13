@@ -8,14 +8,15 @@ module.exports.postWord = (req, res, next) => {
     
     const woord = new Woord(
         req.body.woord,
-        req.body.vertaling
+        req.body.vertaling,
+        req.body.les
     )
     
     woord.save();
 
-    res.redirect('/welcome');
+    // res.redirect('/welcome');
     
-    res.render('add-word.ejs')
+    res.render('admin.ejs')
 
 };
 
