@@ -21,7 +21,7 @@ app.use(bodyparser.urlencoded({extended: false}));
 
 
 app.use(welcomeRoutes);
-app.use('/admin', adminRoutes);
+app.use(adminRoutes);
 app.use(filters);
 
 app.use(error);

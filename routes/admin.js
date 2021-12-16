@@ -4,7 +4,7 @@ const router = express.Router();
 
 const adminPage = require('../controllers/admin');
 
-router.get('/start', adminPage.getAdminPage);
+router.get('/admin', adminPage.getAdminPage);
 
 router.post('/add-word', adminPage.postWord)
 

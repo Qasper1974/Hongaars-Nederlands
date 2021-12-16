@@ -7,22 +7,26 @@
         <br>
         <h4 class="titel">Hongaars - Nederlands</h4>
         <h5 class="aantal-woorden">Totaal aantal woorden: <%=  wsch.length %></h5>
-        <h5 >Filter op woorden met de letter(s) : </h5>
+        <h5 >Filter op... </h5>
         <form action="/filter" method="POST">
-            <input type="text" name="filter" id="filter">
+            <input type="text" name="filterOpWoord" placeholder="woord" >
+        </form>
+        <form action="/filter" method="POST">
+            <input type="text" name="filterOpLes" placeholder="les" >
         </form>
         <br>
         <%  wsch.sort(function(a,b) { if (a.woord < b.woord) {return -1;} if (a.woord > b.woord) { return 1;} }) %>
+        <%  wsch.sort(function(a) { if (parseInt(a.les) == filterOpLes) {wo.push(a);}}) %>
         <% for (let i of wsch) { %>
             <div class="container">
                 <div class="row bg-info border border-dark rounded m-2">
                     <div class="col-2"></div>
                     <div class="col woord"><%= i.woord%></div>
                     <div class="col vertaling"><%= i.vertaling %></div>
-                    <div class="col-2 lecke">Lecke<span class="badge-secondary"><%= i.les %></span></div>
+                    <div class="col-2"><button class="btn btn-info "><h5>L<%= i.les %></h5></button></div>
                 </div>
             </div>
         <% } %>
         <br>
-        <h4>Nederlands - Hongaars</h4>
+        <h4 class="titel">Nederlands - Hongaars</h4>
 <%- include('./partials/end.ejs') %>

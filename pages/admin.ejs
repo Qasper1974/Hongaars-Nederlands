@@ -1,13 +1,11 @@
 <%- include('./partials/head.ejs') %>
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
     <%- include('./partials/navigation') %>
-    <main>
+    <main >
         <h3 class="titel">Woorden toevoegen</h3>
         <br>
-        <form action="/admin/add-word" method="POST">
+        <form action="/add-word" method="POST">
             <div class="form-group">
               <label for="woord">Nieuw woord</label>
               <input type="text" class="form-control" name="woord" id="woord" placeholder="Voeg nieuw woord toe...">
@@ -18,8 +16,9 @@
             </div>
             <div class="form-group">
                 <label for="vertaling">Les</label>
-                <input type="text" class="form-control" name="les" id="les" value='2' placeholder="Les...">
-              </div>
+                <input type="text" class="form-control" name="les" id="les" value='4' placeholder="Les...">
+            </div>
+            <br>
             <button type="submit" class="btn btn-primary">Voeg toe</button>
           </form>
 <%- include('./partials/end.ejs') %>
