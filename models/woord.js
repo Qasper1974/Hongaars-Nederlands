@@ -36,4 +36,16 @@ module.exports = class Woord {
             cb(JSON.parse(fileContent));
         });
     };
+
+    static currentClass (cb) {       
+         
+        const p = path.join(path.dirname(require.main.filename), 'data', 'currentClass.json');
+    
+        fs.readFile(p, (err, fileContent) => {
+            if (err) {
+                cb([]);
+            };
+            cb(JSON.parse(fileContent));
+        });
+    };
 };
