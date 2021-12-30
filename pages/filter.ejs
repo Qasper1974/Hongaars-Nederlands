@@ -5,7 +5,7 @@
     <main>
         <h3>Welkom op mijn woordenboekenwebsite!</h3>
         <br>
-        <h4 class="titel">Hongaars - Nederlands</h4>
+        <h4 class="titel">Swahili - Nederlands</h4>
         <h5 >Filter op woorden met de letter(s) : </h5>
         <form action="/filter" method="POST">
             <input type="text" name="filterOpWoord" placeholder="woort">
@@ -30,5 +30,30 @@
             </div>
         <% } %>
         <br>
-        <h4>Nederlands - Hongaars</h4>
+        <h4 class="titel">Nederlands - Swahili</h4>
+        <h5 >Filter op woorden met de letter(s) : </h5>
+        <form action="/filter" method="POST">
+            <input type="text" name="filterOpWoord" placeholder="woort">
+        </form>
+        <form action="/filter" method="POST">
+            <input type="text" name="filterOpLes" placeholder="les" >
+        </form>
+        <br>
+        <% const woo = []  %>
+        <%  wsch.sort(function(a) { if (a.vertaling.includes(filterOpWoord)) {woo.push(a);}}) %>
+        <%  wsch.sort(function(a) { if (parseInt(a.les) == filterOpLes) {woo.push(a);}}) %>
+        <h5 class="aantal-woorden">Totaal aantal woorden: <%=  woo.length %></h5>
+        <%  wsch.sort(function(a,b) { if (a.vertaling < b.vertaling) {return -1;} if (a.vertaling > b.vertaling) { return 1;} }) %>
+        <% for (let i of woo) { %>
+            <div class="container">
+                <div class="row bg-info border border-dark rounded m-2">
+                    <div class="col-2"></div>
+                    <div class="col woord"><%= i.woord%></div>
+                    <div class="col vertaling"><%= i.vertaling %></div>
+                    <div class="col-2"><button class="btn btn-info "><h5>L<%= i.les %></h5></button></div>
+                </div>
+            </div>
+        <% } %>
+        <br>
+
 <%- include('./partials/end.ejs') %>
